@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+0;276;0c#include "main.h"
 
 /**
  * print_alphabet - print the alphabet
@@ -15,5 +15,5 @@ void print_alphabet(void)
 	{
 		_putchar(c);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
