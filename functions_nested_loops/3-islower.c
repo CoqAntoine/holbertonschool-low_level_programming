@@ -2,7 +2,9 @@
 #include "main.h"
 
 /**
- * print_alphabet_x10 - print the alphabet
+ * _islower - print the alphabet
+ *
+ * @c: The character to be checked.
  *
  * Return: Always 0.
  */
@@ -10,7 +12,7 @@
 int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	        return (1);
+		return (1);
 	else
 		return (0);
 }
