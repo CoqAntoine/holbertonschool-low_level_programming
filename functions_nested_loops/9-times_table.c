@@ -16,14 +16,20 @@ void times_table(void)
 		for (ligne = 0; ligne <= 9; ligne++)
 		{
 			multiple = ligne * colonne;
-			printf("%d", multiple);
+			if (multiple >= 10)
+			{
+				_putchar('0' + (multiple / 10));
+				_putchar('0' + (multiple % 10));
+			}
+			else
+				_putchar('0' + multiple);
 			if (ligne == 9)
 				break;
-			printf(",");
+			_putchar(',');
 			if (multiple <= 9)
-				printf(" ");
-			printf(" ");
+				_putchar(' ');
+			_putchar(' ');
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
