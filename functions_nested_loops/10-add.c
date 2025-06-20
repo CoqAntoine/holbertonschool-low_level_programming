@@ -4,6 +4,10 @@
 /**
  * add - print the alphabet
  *
+ * @int1 : premier entier
+ *
+ * @int2 : deuxieme entier
+ *
  * Return: Always 0.
  */
 
