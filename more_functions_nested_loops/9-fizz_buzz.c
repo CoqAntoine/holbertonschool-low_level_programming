@@ -4,7 +4,7 @@
 /**
  * main - check the code
  *
- * Return : retourne 1 si digit, 0 sinon
+ * Return: retourne 1 si digit, 0 sinon
  */
 
 int main(void)
@@ -16,14 +16,14 @@ int main(void)
 		if ((i % 3) == 0)
 		{
 			if ((i % 5) == 0)
-				printf("Fizz Buzz ");
+				printf("FizzBuzz ");
 			else
 				printf("Fizz ");
 		}
 		else if ((i % 5) == 0)
 		{
 			if ((i % 3) == 0)
-				printf("Fizz Buzz ");
+				printf("FizzBuzz ");
 			else
 				printf("Buzz ");
 		}
