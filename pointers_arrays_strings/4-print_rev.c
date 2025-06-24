@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _print_rev - check the code
+ * print_rev - check the code
  *
  * @s : le string qui doit etre reverse
  *
