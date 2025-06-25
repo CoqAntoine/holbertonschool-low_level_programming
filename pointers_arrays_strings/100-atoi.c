@@ -18,11 +18,11 @@ int _atoi(char *s)
 	for (; s[compteur] != '\0'; compteur++)
 	{
 		if (s[compteur] == '-')
-		        sign = -sign;
+			sign = -sign;
 		else if (s[compteur] >= '0' && s[compteur] <= '9')
 			break;
 	}
 	for (; s[compteur] >= '0' && s[compteur] <= '9'; compteur++)
-		     entier = (entier * 10) + (s[compteur] - '0');
+		entier = (entier * 10) + (s[compteur] - '0');
 	return (entier * sign);
 }
