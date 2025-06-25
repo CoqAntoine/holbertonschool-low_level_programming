@@ -11,7 +11,7 @@
 
 int _atoi(char *s)
 {
-	int entier = 0;
+	unsiint entier = 0;
 	int compteur = 0;
 	int sign = 1;
 
@@ -22,7 +22,6 @@ int _atoi(char *s)
 		else if (s[compteur] >= '0' && s[compteur] <= '9')
 			break;
 	}
-
 	for (; s[compteur] >= '0' && s[compteur] <= '9'; compteur++)
 		     entier = (entier * 10) + (s[compteur] - '0');
 	return (entier * sign);
