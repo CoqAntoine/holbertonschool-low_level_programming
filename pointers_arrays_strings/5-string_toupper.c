@@ -6,7 +6,7 @@
  *
  * @s : string with lower case characters
  *
- * Return : string with only upper case characters
+ * Return: string with only upper case characters
  */
 
 char *string_toupper(char *s)
