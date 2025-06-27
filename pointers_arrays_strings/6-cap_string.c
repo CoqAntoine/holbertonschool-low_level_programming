@@ -20,7 +20,7 @@ char c[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 		cpt2 = 0;
 		while (c[cpt2])
 		{
-			if (s[cpt] == sep[cpt2] && s[cpt + 1] >= 'a' && s[cpt + 1] <= 'z')
+			if (s[cpt] == c[cpt2] && s[cpt + 1] >= 'a' && s[cpt + 1] <= 'z')
 			{
 				s[cpt + 1] = s[cpt + 1] - 32;
 			}
