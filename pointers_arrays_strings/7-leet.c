@@ -11,20 +11,19 @@
 
 char *leet(char *s)
 {
-	int cpt = 0;
+	int cpt = 0, cpt2;
+	char lettre[] = {'A', 'E', 'O', 'T', 'L'};
+	int chiffre[] = {'4', '3', '0', '7', '1'};
 
 	while (s[cpt])
 	{
-		if (s[cpt] == 'a' || s[cpt] == 'A')
-			s[cpt] = '4';
-		else if (s[cpt] == 'e' || s[cpt] == 'E')
-			s[cpt] = '3';
-		else if (s[cpt] == 'o' || s[cpt] == 'O')
-			s[cpt] = '0';
-		else if (s[cpt] == 't' || s[cpt] == 'T')
-			s[cpt] = '7';
-		else if (s[cpt] == 'l' || s[cpt] == 'L')
-			s[cpt] = '1';
+		for (cpt2 = 0; cpt2 < 5; cpt2++)
+		{
+			if (s[cpt] == lettre[cpt2] || s[cpt] == (lettre[cpt2] + 32))
+			{
+				s[cpt] = chiffre[cpt2];
+			}
+		}
 		cpt++;
 	}
 	return (s);
