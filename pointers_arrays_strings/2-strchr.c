@@ -16,11 +16,11 @@ char *ptr;
 
 for (i = 0; s[i]; i++)
 {
+}
 if (s[i] == c)
 {
 ptr = &s[i];
 return (ptr);
-}
 }
 return (0);
 }
