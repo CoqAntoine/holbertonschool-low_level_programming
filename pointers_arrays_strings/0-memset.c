@@ -20,10 +20,11 @@
         cpt++;
     }
 
+    if (cpt < n)
+        n = cpt;
+    
     for (i = 0; i <= n; i++)
     {
-        if (i == cpt)
-            break;
         s[i] = b;
     }
     return (s);
