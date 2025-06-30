@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 unsigned int i = 0;
 char *ptr;
 
-for (i = 0; s[i]; i++)
+for (i = 0; s[i] != c && s[i] != '\0'; i++)
 {
 }
 if (s[i] == c)
