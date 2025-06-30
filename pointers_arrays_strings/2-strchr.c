@@ -21,7 +21,6 @@ if (s[i] == c)
 ptr = &s[i];
 return (ptr);
 }
-elseif (s[i] == '\0')
-return (0);
 }
+return (0);
 }
