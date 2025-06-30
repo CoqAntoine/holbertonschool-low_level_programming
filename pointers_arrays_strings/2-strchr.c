@@ -21,8 +21,8 @@ if (s[i] == c)
 ptr = &s[i];
 break;
 }
-else if (s[i] == '\0')
-return (NULL);
 }
+if (s[i] == '\0')
+return (NULL);
 return (ptr);
 }
