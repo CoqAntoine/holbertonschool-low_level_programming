@@ -4,7 +4,7 @@
 /**
  * _memset - prints buffer in hexa
  * @s: the address of memory to print
- * @a: the size of the memory to print
+ * @n: the size of the memory to print
  * @b: the constant byte
  *
  * Return: pointer s
@@ -16,7 +16,7 @@ unsigned int i = 0;
 
 for (i = 0; i < n; i++)
 {
-    s[i] = b;
+s[i] = b;
 }
 return (s);
 }
