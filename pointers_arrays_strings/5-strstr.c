@@ -23,6 +23,7 @@ for (j = 0; needle[j]; j++)
 if (haystack[i] == needle[0])
 {
 ptr = &haystack[i];
+if (haystack[i] == needle[j])
 return (ptr);
 }
 }
