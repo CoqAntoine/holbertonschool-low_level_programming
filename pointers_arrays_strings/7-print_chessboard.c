@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_chessbpard - check the code
+ * print_chessboard - check the code
  *
  * @a : tableau a print
  *
