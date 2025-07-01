@@ -20,5 +20,10 @@ for (i = 0; i < size; i++)
 sum1 += a[i * size + i];
 sum2 += a[i * size + (size - 1 - i)];
 }
+if (size == 0)
+printf("0, 0");
+else if (size == 1)
+printf("%d, %d", a[i], a[i]);
+else
 printf("%d, %d\n", sum1, sum2);
 }
