@@ -23,9 +23,9 @@ for (j = 0; accept[j]; j++)
 if (s[i] == accept[j])
 {
 ptr = &s[i];
-return(ptr);
+return (ptr);
 }
 }
 }
-return (0);
+return (NULL);
 }
