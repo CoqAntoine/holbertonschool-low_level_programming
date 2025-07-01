@@ -4,8 +4,8 @@
 /**
  * print_diagsums - check the code
  *
- * @a : tableau de reference
- * @size : taille du tableau 
+ *@a: tableau de reference
+ *@size: taille du tableau
  *
  */
 
@@ -18,7 +18,7 @@ int sum2 = 0;
 for (i = 0; i < size; i++)
 {
 sum1 += a[i * size + i];
-sum2 += a[i* size + (size - 1 - i)];
+sum2 += a[i * size + (size - 1 - i)];
 }
 printf("%d, %d\n", sum1, sum2);
 }
