@@ -12,8 +12,8 @@
 
 int checker(int square, int n)
 {
-    if (n < 0)
-		return (0); 
+	if (n < 0)
+		return (0);
 	if (square * square == n)
 		return (0);
 	if (square * square > n)
