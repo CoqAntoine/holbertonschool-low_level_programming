@@ -13,7 +13,7 @@ int is_numeric(char *n)
 
 	while (n[i])
 	{
-		if (n[i] <= '0' || n[i] >= '9')
+		if (n[i] < '0' || n[i] > '9')
 			return(1);
 		i++;
 	}
