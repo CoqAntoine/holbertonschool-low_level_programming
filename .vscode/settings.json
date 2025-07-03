@@ -1,8 +1,4 @@
 {
-    "C_Cpp.errorSquiggles": "enabled"
-}
-
-{
     "[python]": {
         "editor.rulers": [
             79
@@ -21,4 +17,8 @@
         "editor.semanticHighlighting.enabled": true,
         "files.trimTrailingWhitespace": true
     }
+}
+
+{
+    "C_Cpp.errorSquiggles": "enabled"
 }
