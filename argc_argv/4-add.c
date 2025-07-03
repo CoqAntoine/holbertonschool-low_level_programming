@@ -9,9 +9,15 @@
 
 int is_numeric(char *n)
 {
-	if (n[0] >= '0' && n[0] <= '9')
-		return (0);
-	return (1);
+	int i = 0;
+
+	while (n[i])
+	{
+		if (n[i] <= '0' || n[i] >= '9')
+			return(1);
+		i++;
+	}
+	return (0);
 }
 
 /**
@@ -34,7 +40,7 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		sum = sum + (atoi(argv[cpt]));
+		sum += (atoi(argv[cpt]));
 		cpt++;
 	}
 	printf("%d\n", sum);
