@@ -1,34 +1,34 @@
 #include <stdio.h>
 
 /**
- * checker - Recursively checks if a number is divisible by any number
- *           from 'square' up to the square root of 'n'.
- * @square: the current divisor being tested
- * @n: the number to check for primality
+ * is_prime_recursive - vérifie récursivement si un nombre est premier
+ * @n: nombre à tester
+ * @div: diviseur courant pour tester la primalité
  *
- * Return: 1 if 'n' is a prime number (no divisors found),
- *         0 if 'n' is not a prime number (divisor found)
+ * Return: 1 si @n est un nombre premier, sinon 0.
  */
 
-int checker(int square, int n)
+int is_prime_recursive(int n, int div)
 {
-	if (n < 0)
+	if (n <= 1)
 		return (0);
-	if (square * square == n)
-		return (0);
-	if (square * square > n)
+	if (div * div > n)
 		return (1);
-	return (checker(square + 1, n));
+	if (n % div == 0)
+		return (0);
+	return (is_prime_recursive(n, div + 1));
 }
 
+
 /**
- * is_prime_number - Determines whether a given integer is a prime number.
- * @n: the number to check
+ * is_prime_number - détermine si un entier est un nombre premier
+ * @n: entier à tester
  *
- * Return: 1 if 'n' is a prime number, 0 otherwise
+ * Return: si @n est premier, sinon 0.
  */
 
 int is_prime_number(int n)
 {
-	return (checker(1, n));
+	return (is_prime_recursive(n, 2));
 }
+
