@@ -2,10 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - check the code.
- * @argc: entier
- * @argv: array
- * Return: Always 0.
+ * is_numeric - check the code.
+ * @n : integer
+ * Return: 0 if ok.
  */
 
 int is_numeric(char *n)
@@ -14,6 +13,13 @@ int is_numeric(char *n)
 		return (0);
 	return (1);
 }
+
+/**
+ * main - check the code.
+ * @argc: entier
+ * @argv: array
+ * Return: Always 0.
+ */
 
 int main(int argc, char *argv[])
 {
