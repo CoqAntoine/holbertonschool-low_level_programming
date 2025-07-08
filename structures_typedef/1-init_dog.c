@@ -7,6 +7,8 @@
  * @name: Name to assign to the dog
  * @age: Age to assign to the dog
  * @owner: Owner to assign to the dog
+ *
+ * Description: Initializes the struct dog pointed to by d.
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
