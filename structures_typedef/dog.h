@@ -11,24 +11,13 @@
  * including its name, age, and the name of its owner.
  */
 
-struct dog 
+typedef struct dog 
 {
     char *name;
     float age;
     char *owner;
 };
 
-/**
- * init_dog - Initializes a struct dog variable
- * @d: Pointer to struct dog to initialize
- * @name: Name to assign to the dog
- * @age: Age to assign to the dog
- * @owner: Owner to assign to the dog
- *
- * Description: This function sets the fields of the struct dog
- * pointed to by d to the values passed in name, age, and owner.
- */
- 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
