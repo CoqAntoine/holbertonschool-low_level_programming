@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <limits.h>
 #include "function_pointers.h"
 
 /**
