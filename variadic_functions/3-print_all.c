@@ -13,19 +13,24 @@
 void print_all(const char * const format, ...)
 {
 	va_list args;
+	int printed = 0;
 	const char *char_format = format;
 	char *str;
 
 	va_start(args, format);
 	while (char_format && *char_format)
 	{
+		if ((*char_format == 'c' || *char_format == 'i' ||
+		     *char_format == 'f' || *char_format == 's') && (printed++ > 0))
+			printf(", ");
+
 		if (*char_format == 'c')
 			printf("%c", va_arg(args, int));
-		if (*char_format == 'i')
+		else if (*char_format == 'i')
 			printf("%d", va_arg(args, int));
-		if (*char_format == 'f')
+		else if (*char_format == 'f')
 			printf("%f", va_arg(args, double));
-		if (*char_format == 's')
+		else if (*char_format == 's')
 		{
 			str = va_arg(args, char *);
 			printf("%s", str ? str : "(nil)");
