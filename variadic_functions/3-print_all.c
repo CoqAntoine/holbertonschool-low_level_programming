@@ -24,16 +24,21 @@ void print_all(const char * const format, ...)
 		     *char_format == 'f' || *char_format == 's') && (printed++ > 0))
 			printf(", ");
 
-		if (*char_format == 'c')
-			printf("%c", va_arg(args, int));
-		else if (*char_format == 'i')
-			printf("%d", va_arg(args, int));
-		else if (*char_format == 'f')
-			printf("%f", va_arg(args, double));
-		else if (*char_format == 's')
+		switch (*char_format)
 		{
-			str = va_arg(args, char *);
-			printf("%s", str ? str : "(nil)");
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+				str = va_arg(args, char *);
+				printf("%s", str ? str : "(nil)");
+				break;
 		}
 		char_format++;
 	}
