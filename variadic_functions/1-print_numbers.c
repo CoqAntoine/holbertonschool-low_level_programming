@@ -2,6 +2,14 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_numbers - Prints numbers separated by a given separator
+ * @separator: String to print between numbers
+ * @n: Number of integers passed to the function
+ *
+ * Description: Prints numbers followed by a new line.
+ */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list(args);
