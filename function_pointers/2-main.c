@@ -7,6 +7,7 @@
  *
  * Return: 0 if false, something else otherwise.
  */
+
 int is_98(int elem)
 {
     return (98 == elem);
