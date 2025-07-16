@@ -2,6 +2,12 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_strings - Prints n strings separated by a separator.
+ * @separator: String printed between each argument (if not NULL)
+ * @n: Number of strings passed to the function
+ */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list(args);
@@ -10,7 +16,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(args, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%s", va_arg(args, char *));
+		char *s = va_arg(args, char *);
+
+		if (s == NULL)
+			printf("(nil)");
+		else
+			printf("%s", s);
 		if (i < n - 1 && separator != NULL)
 			printf("%s", separator);
 	}
