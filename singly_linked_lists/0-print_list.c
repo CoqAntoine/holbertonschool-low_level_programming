@@ -2,23 +2,17 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-#include <unistd.h>
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * print_list - Prints all the elements of a list_t linked list
+ * @h: Pointer to the head of the list
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: The number of nodes printed
  */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
 size_t print_list(const list_t *h)
 {
 	size_t count = 0, j;
+
 	while (h != NULL)
 	{
 		_putchar('[');
