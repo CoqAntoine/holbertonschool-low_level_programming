@@ -11,18 +11,13 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0, j, div, mod;
+	size_t count = 0, j;
 
 	while (h != NULL)
 	{
 		_putchar('[');
-		div = h->len;
-		while (div != 0)
-		{
-			mod = div % 10;
-			div = div / 10;
-			_putchar('0' + mod);
-		}
+		if (h->len < 9)
+			_putchar('0' + h->len);
 		_putchar(']');
 		_putchar(' ');
 		if (h->str != NULL)
