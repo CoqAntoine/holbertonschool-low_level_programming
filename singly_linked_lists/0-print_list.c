@@ -11,43 +11,14 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t count = 0, j, mod, div;
+	size_t count = 0;
 
 	while (h != NULL)
 	{
-		_putchar('[');
-		if (h->len == 0)
-			_putchar('0');
-		else
-		{
-			div = h->len;
-			while(div != 0)
-			{
-				mod = div % 10;
-				div = div / 10;
-				_putchar('0' + mod);
-			}
-		}
-		_putchar(']');
-		_putchar(' ');
 		if (h->str != NULL)
-		{
-			for (j = 0; h->str[j] != '\0'; j++)
-			{
-				_putchar(h->str[j]);
-			}
-		}
+			printf("[%d] %s\n", h->len, h->str);
 		else
-		{
-			_putchar('(');
-			_putchar('n');
-			_putchar('i');
-			_putchar('l');
-			_putchar(')');
-		}
-
-		_putchar('\n');
-
+			printf("[%d] %s\n", h->len, "(nil)");
 		h = h->next;
 		count++;
 	}
