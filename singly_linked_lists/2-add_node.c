@@ -20,9 +20,8 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL)
 		return (NULL);
 
-	for (; *str != '\0'; str++)
+	for (; str[count] != '\0'; count++)
 	{
-		count++;
 	}
 
 	new->str = copy;
