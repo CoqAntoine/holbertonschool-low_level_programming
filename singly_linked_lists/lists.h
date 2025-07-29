@@ -2,7 +2,6 @@
 #define LISTS_H
 
 int _putchar(char c);
-int _strlen(char *s);
 
 /**
  * struct list_s - singly linked list
