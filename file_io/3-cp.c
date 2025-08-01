@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		{
 			close(fd_from);
 			close(fd_to);
-			error_exit(98, "Error: Can't write to %s\n", argv[2]);
+			error_exit(99, "Error: Can't write to %s\n", argv[2]);
 		}
 	}
 	if (read_count == -1)
