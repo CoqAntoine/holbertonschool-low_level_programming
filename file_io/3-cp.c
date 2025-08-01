@@ -35,10 +35,7 @@ int main(int argc, char *argv[])
 		error_exit(98, "Error: Can't read from file %s\n", argv[1]);
 	fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_to == -1)
-	{
-		close(fd_from);
-		error_exit(99, "Error: Can't write to %s\n", argv[2]);
-	}
+		close(fd_from), error_exit(99, "Error: Can't write to %s\n", argv[2]);
 	while ((read_count = read(fd_from, buffer, 1024)) > 0)
 	{
 		write_count = write(fd_to, buffer, read_count);
@@ -46,8 +43,10 @@ int main(int argc, char *argv[])
 		{
 			close(fd_from);
 			if (close(fd_from) == -1)
+			{
 				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from);
 				close(fd_to), exit(100);
+			}
 			close(fd_to);
 			if (close(fd_to) == -1)
 				dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
