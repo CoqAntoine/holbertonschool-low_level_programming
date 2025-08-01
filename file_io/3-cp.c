@@ -52,7 +52,6 @@ int main(int argc, char *argv[])
 			error_exit(99, "Error: Can't write to %s\n", argv[2]);
 		}
 	}
-	read_count = read(fd_from, buffer, 1024);
 	if (read_count == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
